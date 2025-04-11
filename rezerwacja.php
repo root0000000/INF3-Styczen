@@ -6,7 +6,7 @@
     $telefon = filter_var(trim($_POST['telefon']),
     FILTER_SANITIZE_STRING);
 
-    $mysql = new mysqli('localhost', 'root', '', 'reustauracja');
+    $mysql = new mysqli('localhost', 'root', '', 'restauracje ');
     $mysql->query("INSERT INTO `rezerwacje` (`data_rez`,`liczba_osob`,`telefon`)
     VALUES('$data', '$osoby', '$telefon')");
     $mysql->close()
